@@ -13,12 +13,8 @@ def string_frame(str, style: int = 0, padding: int = 1):
         current_len = len(i)
         if current_len > max_len:
             max_len = current_len
-    res = []
-    res.append(
-        styles[style][0]
-        + (styles[style][1] * (max_len + (padding * 2)))
-        + styles[style][2]
-    )
+    res = [(styles[style][0]
+        + (styles[style][1] * (max_len + (padding * 2))) + styles[style][2])]
     for i in str_s:
         space = max_len - len(i) + padding
         res.append(
